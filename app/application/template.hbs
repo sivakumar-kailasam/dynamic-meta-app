@@ -1,0 +1,35 @@
+{{head-layout}}
+<h2 id="title">Auto Populate meta info✨✨✨</h2>
+<nav>
+  <ul>
+    <li>{{#link-to "index"}}
+      Index route
+    {{/link-to}}</li>
+    <li>{{#link-to "first-route"}}
+      First route
+    {{/link-to}}</li>
+    <li>
+      {{#link-to "second-route"}}
+        Second route
+      {{/link-to}}
+    </li>
+  </ul>
+</nav>
+
+<main>
+  {{outlet}}
+</main>
+
+<footer>
+  <p>
+    In <code>headData</code> service <code>msg</code>
+    {{#if headData.msg}}
+      is set to '<code>{{headData.msg}}</code>'
+    {{else}}
+      is not set for this route.
+    {{/if}}
+    </p>
+    <p class="foot-note">
+      Psst!, Make sure to check the <code>&lt;meta&gt;</code> tags inside <code>&lt;head&gt;</code> yourself!
+    </p>
+</footer>
